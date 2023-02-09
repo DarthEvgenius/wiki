@@ -102,7 +102,7 @@ def new(request):
         text = request.POST["entry_text"]
 
         # Check for blank inputs
-        if not title or text:
+        if not title or not text:
             return render(request, "encyclopedia/index.html", {
                 "entries": util.list_entries()
             })
